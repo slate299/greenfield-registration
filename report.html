@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Report - Greenfield Institute</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #e8f5e9;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        .report-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .header {
+            background: #123524;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 30px;
+        }
+        h2 {
+            color: #123524;
+            border-left: 5px solid #2ecc71;
+            padding-left: 15px;
+            margin: 25px 0 15px 0;
+        }
+        h3 {
+            color: #2e7d32;
+            margin: 20px 0 10px 0;
+        }
+        h4 {
+            color: #333;
+            margin: 15px 0 5px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #123524;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f5f5f5;
+        }
+        .architecture-box {
+            background: #f0fdf4;
+            border-left: 4px solid #2ecc71;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .tech-badge {
+            display: inline-block;
+            background: #123524;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin: 5px;
+        }
+        .flow-diagram {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            font-family: monospace;
+        }
+        .footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        .member-list {
+            list-style: none;
+            padding: 0;
+        }
+        .member-list li {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li:before {
+            content: "✅ ";
+            color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+<div class="report-container">
+    <div class="header">
+        <h1>Greenfield Institute</h1>
+        <p>Course Registration System - Three-Tier Architecture Implementation</p>
+        <p><strong>Submission Date:</strong> <?php echo date('F j, Y'); ?></p>
+    </div>
+
+    <div class="content">
+        <!-- Group Information -->
+        <h2>👥 Group 14 - Team Members</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Registration Number</th>
+                <th>Role in Project</th>
+            </tr>
+            <tr>
+                <td>Kelvin Mutinda</td>
+                <td>SCM211-0325/2024</td>
+                <td>Admin Pages (Dashboard, Course Management, Registrations)</td>
+            </tr>
+            <tr>
+                <td>Ida Gakii</td>
+                <td>SCM211-0364/2024</td>
+                <td>Student Pages (Dashboard, My Courses, Course Browsing)</td>
+            </tr>
+            <tr>
+                <td>Natasha Hinga</td>
+                <td>SCM211-0311/2024</td>
+                <td>Backend Development (Database Connection, Session Management)</td>
+            </tr>
+            <tr>
+                <td>Victor Ngatia</td>
+                <td>SCM211-0117/2023</td>
+                <td>Backend Development (Course Registration Logic, XML Integration)</td>
+            </tr>
+            <tr>
+                <td>Vivian Leah Muthoni</td>
+                <td>SCM211-0340/2024</td>
+                <td>Login and Registration System (Authentication, Form Design)</td>
+            </tr>
+        </table>
+
+        <!-- Project Overview -->
+        <h2>📋 Project Overview</h2>
+        <p>Greenfield Institute, a mid-sized educational organization, needed a modern web-based course registration system to replace their manual email and spreadsheet-based process. This system streamlines registration, improves data accuracy, and enhances user experience for both students and administrators.</p>
+
+        <!-- Three-Tier Architecture -->
+        <h2>🏗️ Three-Tier Architecture Implementation</h2>
+
+        <div class="architecture-box">
+            <h3>1. Presentation Tier (User Interface)</h3>
+            <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
+            <p><strong>Purpose:</strong> Provides visual interface for users to interact with the system.</p>
+            <p><strong>Implemented by:</strong> Vivian Leah Muthoni (Login/Register), Ida Gakii (Student Pages), Kelvin Mutinda (Admin Pages)</p>
+            <p><strong>Key Files:</strong></p>
+            <ul>
+                <li><code>login.php</code> - Student/Admin login with role toggle</li>
+                <li><code>register.php</code> - Student registration with validation</li>
+                <li><code>student_dashboard.php</code> - Student course browsing and enrollment</li>
+                <li><code>admin_dashboard.php</code> - Admin course management interface</li>
+                <li><code>my_courses.php</code> - View and drop enrolled courses</li>
+                <li><code>css/student_dashboard.css</code> - Responsive styling</li>
+                <li><code>js/my_courses.js</code> - Search, filter, modal interactions</li>
+            </ul>
+        </div>
+
+        <div class="architecture-box">
+            <h3>2. Business Logic Tier (Application Layer)</h3>
+            <p><strong>Technologies:</strong> PHP 8.x</p>
+            <p><strong>Purpose:</strong> Processes user requests, enforces business rules, and coordinates data flow.</p>
+            <p><strong>Implemented by:</strong> Natasha Hinga & Victor Ngatia</p>
+            <p><strong>Key Files & Functions:</strong></p>
+            <ul>
+                <li><code>config/database.php</code> - MySQL connection management</li>
+                <li><code>includes/functions.php</code> - Session handling, authentication, sanitization</li>
+                <li><code>register_course.php</code> - Prevents duplicate registrations, checks capacity</li>
+                <li><code>drop_course.php</code> - Removes course enrollment</li>
+                <li><code>add_course.php</code> / <code>edit_course.php</code> / <code>delete_course.php</code> - Admin course operations</li>
+                <li><code>import_xml.php</code> / <code>export_xml.php</code> - XML data exchange</li>
+            </ul>
+            <p><strong>Business Rules Enforced:</strong></p>
+            <ul>
+                <li>✅ No duplicate course registrations per student</li>
+                <li>✅ Course capacity limits (cannot exceed capacity)</li>
+                <li>✅ Password hashing for security (password_hash, password_verify)</li>
+                <li>✅ Role-based access control (Student vs Admin)</li>
+                <li>✅ Cannot delete courses with enrolled students</li>
+            </ul>
+        </div>
+
+        <div class="architecture-box">
+            <h3>3. Data Tier (Database Layer)</h3>
+            <p><strong>Technologies:</strong> MySQL 8.0</p>
+            <p><strong>Purpose:</strong> Stores and manages all persistent data.</p>
+            <p><strong>Implemented by:</strong> Natasha Hinga</p>
+            <p><strong>Database Schema:</strong></p>
+            <table>
+                <tr>
+                    <th>Table</th>
+                    <th>Columns</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td><code>users</code></td>
+                    <td>id, name, email, password_hash, role, student_id, created_at</td>
+                    <td>Stores student and admin accounts</td>
+                </tr>
+                <tr>
+                    <td><code>courses</code></td>
+                    <td>id, course_code, course_name, description, instructor, capacity, semester</td>
+                    <td>Stores all course information</td>
+                </tr>
+                <tr>
+                    <td><code>registrations</code></td>
+                    <td>id, user_id, course_id, registration_date, status</td>
+                    <td>Links students to courses (many-to-many relationship)</td>
+                </tr>
+            </table>
+            <p><strong>Key Relationships:</strong></p>
+            <ul>
+                <li>Foreign key: <code>registrations.user_id → users.id</code> (ON DELETE CASCADE)</li>
+                <li>Foreign key: <code>registrations.course_id → courses.id</code> (ON DELETE CASCADE)</li>
+                <li>Unique constraint: <code>(user_id, course_id)</code> prevents duplicate registrations</li>
+            </ul>
+        </div>
+
+        <!-- Data Flow -->
+        <h2>🔄 How Data Flows Through the Tiers</h2>
+        <div class="flow-diagram">
+            <strong>Example: Student registering for a course</strong><br><br>
+            1️⃣ <strong>Presentation Tier:</strong> Student clicks "Register" on student_dashboard.php<br>
+            ↓<br>
+            2️⃣ <strong>Business Tier:</strong> register_course.php checks for duplicates & capacity<br>
+            ↓<br>
+            3️⃣ <strong>Data Tier:</strong> MySQL queries check existing registrations, then INSERT new record<br>
+            ↓<br>
+            4️⃣ <strong>Response:</strong> Success/error message sent back to Presentation Tier<br>
+        </div>
+
+        <!-- XML Integration -->
+        <h2>📄 XML Integration</h2>
+        <p>The system demonstrates XML for structured data exchange:</p>
+        <ul>
+            <li><strong>Export:</strong> <code>export_xml.php</code> - Converts MySQL course data to XML format for download</li>
+            <li><strong>Import:</strong> <code>import_xml.php</code> - Parses XML files using PHP's SimpleXML and inserts into database</li>
+            <li><strong>Sample XML:</strong> <code>xml/courses.xml</code> - Example course data structure</li>
+        </ul>
+
+        <!-- Features Implemented -->
+        <h2>✅ Features Implemented</h2>
+        <ul class="checklist">
+            <li>Student registration with secure password hashing</li>
+            <li>Student/Admin login with role-based redirection</li>
+            <li>Browse available courses with real-time capacity display</li>
+            <li>Register for courses (duplicate & capacity prevention)</li>
+            <li>View enrolled courses with progress indicators</li>
+            <li>Drop courses with confirmation modal</li>
+            <li>Admin dashboard with statistics (students, courses, registrations)</li>
+            <li>Add, edit, and delete courses (delete only if no students enrolled)</li>
+            <li>View all student registrations in one table</li>
+            <li>XML import/export functionality</li>
+            <li>Responsive design (mobile compatible)</li>
+            <li>Client-side form validation (JavaScript)</li>
+            <li>Server-side validation & sanitization (PHP)</li>
+            <li>SQL injection prevention (prepared statements)</li>
+            <li>Search and filter courses</li>
+        </ul>
+
+        <!-- Sample Data -->
+        <h2>📊 Sample Data</h2>
+        <p><strong>Courses (8 courses):</strong></p>
+        <table>
+            <tr><th>Code</th><th>Course Name</th><th>Instructor</th><th>Semester</th></tr>
+            <tr><td>SMA3101</td><td>Probability and Statistics III</td><td>Prof. James Otieno</td><td>Semester 1, 2026</td></tr>
+            <tr><td>SMA2100</td><td>Introduction to Abstract Algebra</td><td>Dr. Mercy Wanjiku</td><td>Semester 1, 2026</td></tr>
+            <tr><td>ICS2402</td><td>Internet Application Programming</td><td>Prof. Kamau Maina</td><td>Semester 1, 2026</td></tr>
+            <tr><td>ICS2305</td><td>System Analysis and Design</td><td>Dr. Achieng Omondi</td><td>Semester 2, 2026</td></tr>
+            <tr><td>BUS1102</td><td>Entrepreneurship Skills</td><td>Prof. Njeri Mwangi</td><td>Semester 2, 2026</td></tr>
+            <tr><td>SMA1104</td><td>Linear Algebra I</td><td>Dr. Odhiambo Oduor</td><td>Semester 1, 2026</td></tr>
+            <tr><td>ICS2312</td><td>Operating Systems II</td><td>Prof. Wanjiru Kariuki</td><td>Semester 2, 2026</td></tr>
+            <tr><td>ICS2405</td><td>Statistical Programming</td><td>Dr. Atieno Ochieng</td><td>Semester 2, 2026</td></tr>
+        </table>
+
+        <p><strong>Test Credentials:</strong></p>
+        <table>
+            <tr><th>Role</th><th>Email</th><th>Password</th></tr>
+            <tr><td>Admin</td><td>admin@greenfield.edu</td><td>admin123</td></tr>
+            <tr><td>Student</td><td>john.mwangi@student.edu</td><td>student123</td></tr>
+            <tr><td>Student</td><td>mary.wanjiku@student.edu</td><td>student123</td></tr>
+        </table>
+
+        <!-- Conclusion -->
+        <h2>🎯 Conclusion</h2>
+        <p>The Greenfield Institute Course Registration System successfully addresses the institution's registration challenges by providing a centralized, web-based solution. The three-tier architecture ensures:</p>
+        <ul>
+            <li><strong>Scalability</strong> - Each tier can be upgraded independently</li>
+            <li><strong>Maintainability</strong> - Clear separation of concerns</li>
+            <li><strong>Security</strong> - Password hashing, prepared statements, session management</li>
+            <li><strong>Usability</strong> - Responsive design, intuitive interface</li>
+        </ul>
+        <p>All assignment requirements have been met, including the three-tier architecture, XML integration, and all core features for both students and administrators.</p>
+
+    </div>
+
+    <div class="footer">
+        <p>Greenfield Institute of Science and Technology</p>
+        <p>© <?php echo date('Y'); ?> Group 14 - Course Registration System Project</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses>
+    <course>
+        <course_code>ICT4101</course_code>
+        <course_name>Mobile App Development</course_name>
+        <description>Android and iOS app development using Flutter</description>
+        <instructor>Prof. James Otieno</instructor>
+        <capacity>35</capacity>
+        <semester>Semester 1, 2026</semester>
+    </course>
+    <course>
+        <course_code>ICT4102</course_code>
+        <course_name>Data Science</course_name>
+        <description>Machine learning, data analysis, and visualization</description>
+        <instructor>Dr. Mercy Wanjiku</instructor>
+        <capacity>30</capacity>
+        <semester>Semester 2, 2026</semester>
+    </course>
+    <course>
+        <course_code>BUS2103</course_code>
+        <course_name>Project Management</course_name>
+        <description>Agile, Scrum, and project planning methodologies</description>
+        <instructor>Prof. Kamau Maina</instructor>
+        <capacity>40</capacity>
+        <semester>Semester 3, 2026</semester>
+    </course>
+</courses>
