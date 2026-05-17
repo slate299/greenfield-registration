@@ -9,17 +9,13 @@
 ## 📸 Screenshots
 
 ### 🔐 Login Page
-![Login Page](images/login.png)
-
-*Student and Admin login with role toggle*
+![Login Page](screenshots/login.png)
 
 ### 📚 Course Listing Page
-![Course Listing](images/courses.png)
-
-*Student dashboard showing all available courses with real-time capacity*
+![Course Listing](screenshots/courses.png)
 
 ### 🗄️ Database Structure
-![Database Structure](images/database.png)
+![Database Structure](screenshots/database.png)
 
 *MySQL database showing users, courses, and registrations tables*
 
